@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhishGuard | URL Detector</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">🛡️ PhishGuard</div>
+        <span class="status">● SECURITY SCANNER</span>
+    </header>
+
+    <main>
+        <section class="hero">
+            <p class="tagline">CYBERSECURITY MADE SIMPLE</p>
+            <h1>Detect Phishing.<br>
+                <span>Stay Protected.</span>
+            </h1>
+            <p class="description">
+                Analyze suspicious URLs and identify common
+                phishing indicators before you visit a website.
+            </p>
+        </section>
+
+        <section class="scanner">
+            <h2>🔍 URL Security Scanner</h2>
+            <p>Enter a website URL to analyze its security patterns.</p>
+
+            <div class="input-area">
+                <input
+                    type="text"
+                    id="urlInput"
+                    placeholder="https://example.com"
+                >
+                <button id="scanBtn" onclick="scanURL()">
+                    Analyze URL
+                </button>
+            </div>
+
+            <p class="hint">
+                ⚠️ This scanner analyzes URL patterns only.
+                It does not visit the website.
+            </p>
+        </section>
+
+        <section id="result" class="result hidden">
+            <h2>Analysis Report</h2>
+
+            <div class="score-card">
+                <p>Risk Score</p>
+                <h1 id="score">0%</h1>
+                <div class="progress">
+                    <div id="progressBar"></div>
+                </div>
+                <h3 id="verdict"></h3>
+            </div>
+
+            <h3>Security Indicators</h3>
+            <ul id="findings"></ul>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>PhishGuard | Educational Cybersecurity Project</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
